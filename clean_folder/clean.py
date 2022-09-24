@@ -35,6 +35,7 @@ def create_directory(path, name):
 # функція перебору файлів по папці
 def cleaner(path_holder, path):
     print(path_holder)
+    path_holder = Path(path_holder)
     for file in path_holder.iterdir():
         print(file)
         if file.is_dir() and file.name not in DIR_IGNOR_NAMES:
